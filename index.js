@@ -25,8 +25,7 @@ var wordList = [
     'agizia',
     'aibika', 
     'akhera', 
-    'albamu',
-    'amilesi', 
+    'albamu', 
     'anguka', 
     'anjari', 
     'askari', 
@@ -44,7 +43,174 @@ var wordList = [
     'badamu', 
     'badani', 
     'badili', 
-    'batili'
+    'batili',
+    'bakuli', 
+    'beseni', 
+    'bandia', 
+    'badala', 
+    'bakora',
+    'bandua', 
+    'banika',
+    'barafu', 
+    'baraji', 
+    'baraza', 
+    'barizi', 
+    'barkoa', 
+    'baruti', 
+    'batiki', 
+    'batiza', 
+    'bayana', 
+    'beberu', 
+    'bazazi', 
+    'bazoka', 
+    'balozi', 
+    'baluni', 
+    'banana', 
+    'baraka',
+    'bamiza', 
+    'bawaba', 
+    'bazuka',
+    'batana', 
+    'bepari', 
+    'bendua', 
+    'besera', 
+    'binamu', 
+    'binuka', 
+    'bingwa', 
+    'biriji', 
+    'bishoo', 
+    'bizari', 
+    'bitana', 
+    'bobari', 
+    'bokozi', 
+    'bokoka', 
+    'braili', 
+    'brashi', 
+    'buguja', 
+    'buibui', 
+    'bunguu', 
+    'bupuru', 
+    'buruji', 
+    'busati', 
+    'bwikia',
+    'chafya',
+    'chumvi',
+    'chuchu', 
+    'chafua', 
+    'chagaa', 
+    'chakaa', 
+    'chagua', 
+    'chakua', 
+    'chambi', 
+    'chamvi',
+    'chamka', 
+    'chamko', 
+    'chambo', 
+    'chanua', 
+    'chanjo', 
+    'chanja', 
+    'chanzo', 
+    'chapuo', 
+    'chashi', 
+    'chavua', 
+    'chemba', 
+    'chenza', 
+    'chando', 
+    'changa', 
+    'changu', 
+    'chanja', 
+    'chanje', 
+    'chapuo', 
+    'chapwa', 
+    'chapia', 
+    'charua', 
+    'chauka', 
+    'chavua', 
+    'cheche', 
+    'chekeo', 
+    'chenji', 
+    'cheuwa', 
+    'chicha', 
+    'chimba', 
+    'chinja', 
+    'chipsi', 
+    'chipua', 
+    'chombo', 
+    'chofuo', 
+    'chimbo', 
+    'chocho', 
+    'chobea', 
+    'chokoa', 
+    'chogoe', 
+    'chokaa', 
+    'chokea', 
+    'chonga', 
+    'chomoa', 
+    'chonge', 
+    'chonda', 
+    'chongo', 
+    'chonza', 
+    'chonjo', 
+    'chovya', 
+    'chovyo', 
+    'chordo', 
+    'chubwi', 
+    'chubua', 
+    'chujua',
+    'chuguu', 
+    'chukia', 
+    'chukua',  
+    'chumba', 
+    'chunga', 
+    'chungu', 
+    'chupia', 
+    'chuuza', 
+    'chusha',
+    'dadisa', 
+    'dadisi', 
+    'dafina', 
+    'dabali', 
+    'dachia', 
+    'dakika', 
+    'dandia', 
+    'daraja', 
+    'darasa', 
+    'darizi', 
+    'dalali',
+    'dalili',
+    'dachia', 
+    'daamba', 
+    'dafrau', 
+    'dakawa', 
+    'damara', 
+    'damisi', 
+    'daraba', 
+    'darisi', 
+    'durusu', 
+    'dawala', 
+    'dawati',
+    'dandia', 
+    'debeki', 
+    'dedesa', 
+    'dhambi', 
+    'dhaifu', 
+    'dharba', 
+    'dhiraa',
+    'diwani',
+    'dibaji', 
+    'dimbua', 
+    'dikrii', 
+    'dimbua', 
+    'dimbwi', 
+    'ditama', 
+    'dizeli',
+    'dosari', 
+    'drafti', 
+    'dukiza', 
+    'dukizi', 
+    'dumaza', 
+    'dumuzi'
+
 ];
 
 var guessList = [
@@ -87,26 +253,15 @@ var guessList = [
     'batili'
 ];
 
-
-
-const day = 1000 / 60 / 60 / 24;
 guessList = guessList.concat(wordList);
-
-var word = wordList[Math.floor(day*wordList.length)].toUpperCase();
+var word = parseInt(Date.now() - new Date(2022, 0, 1)) / 1000 / 60 / 60 / 24 ;
+word = wordList[Math.floor(word)].toUpperCase();
 console.log(word);
 
 window.onload = function(){
     intialize();
 }
 
-function popup() {
-    alert("When correct show the following");
-}
-
-function darkMode() {
-    var element = document.body;
-   element.classList.toggle("dark-mode");
-}
 
 function intialize() {
 
@@ -166,7 +321,11 @@ function intialize() {
     document.addEventListener("keyup", (e) => {
         processInput(e);
     })
+
+    
 }
+
+
 
 function processKey() {
     e = { "code" : this.id };
@@ -200,7 +359,7 @@ function processInput(e) {
 
     if (!gameOver && row == height) {
         gameOver = true;
-        document.getElementById("answer").innerText = word;
+        document.getElementById("answer").innerText = "Samahani neno la leo ni "+word;
     }
 }
 
@@ -219,7 +378,7 @@ function update() {
     console.log(guess);
 
     if (!guessList.includes(guess)) {
-        document.getElementById("answer").innerText = "Not in word list";
+        document.getElementById("answer").innerText = "Neno hili halipo";
         return;
     } 
     //start processing guess
@@ -257,6 +416,7 @@ function update() {
         }
 
         if (correct == width) {
+            document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
             gameOver = true;
         }
     }
@@ -289,4 +449,7 @@ function update() {
 
     row += 1; //start new row
     col = 0; //start at 0 for new row
+
+    
 }
+
