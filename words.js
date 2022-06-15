@@ -1,0 +1,88 @@
+var wordList = [
+    'adhabu', 
+    'afyuni', 
+    'agulia', 
+    'aidini', 
+    'akania', 
+    'akhiri', 
+    'akrabu', 
+    'adhimu', 
+    'afandi', 
+    'adisha',
+    'ajwari', 
+    'achana', 
+    'adhana', 
+    'afueni',
+    'agizia',
+    'aibika', 
+    'akhera', 
+    'albamu',
+    'amilesi', 
+    'anguka', 
+    'anjari', 
+    'askari', 
+    'askofu', 
+    'asmini', 
+    'abiria', 
+    'adresi', 
+    'angani',
+    'achari',
+    'bwakia', 
+    'bahari',
+    'bahati',
+    'baridi', 
+    'bamvua', 
+    'badamu', 
+    'badani', 
+    'badili', 
+    'batili'
+];
+
+var guessList = [
+    'adhabu', 
+    'afyuni', 
+    'agulia', 
+    'aidini', 
+    'akania', 
+    'akhiri', 
+    'akrabu', 
+    'adhimu', 
+    'afandi', 
+    'adisha',
+    'ajwari', 
+    'achana', 
+    'adhana', 
+    'afueni',
+    'agizia',
+    'aibika', 
+    'akhera', 
+    'albamu',
+    'amilesi', 
+    'anguka', 
+    'anjari', 
+    'askari', 
+    'askofu', 
+    'asmini', 
+    'abiria', 
+    'adresi', 
+    'angani',
+    'achari',
+    'bwakia', 
+    'bahari',
+    'bahati',
+    'baridi', 
+    'bamvua', 
+    'badamu', 
+    'badani', 
+    'badili', 
+    'batili'
+];
+
+const offsetFromDate = new Date(2022, 0, 1); // starting date
+const msOffset = Date.now() - offsetFromDate // get difference in milliseconds
+const dayOffset = msOffset / 1000 / 60 / 60 / 24 // convert to days
+
+
+guessList = guessList.concat(wordList);
+
+export const word = wordList[Math.floor(dayOffset)].toUpperCase();
