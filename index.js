@@ -544,6 +544,8 @@ var wordList = [
 ];
 
 var guessList = [
+    'ambayo',
+    'sabuni',
     'habari',
     'salamu',
     'chepeo',
