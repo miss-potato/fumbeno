@@ -1096,7 +1096,6 @@ var guessList = [
 guessList = guessList.concat(wordList);
 var word = parseInt(Date.now() - new Date(2022, 0, 1)) / 1000 / 60 / 60 / 24 ;
 word = wordList[Math.floor(word)].toUpperCase();
-console.log(word);
 
 window.onload = function(){
     intialize();
