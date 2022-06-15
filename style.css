@@ -1,26 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
-.dark-mode {
-    background-color: black;
-  }
+
 
 hr {
     width: 500px;
+    color: white;
 }
 
 #title {
+    font-family: 'Fascinate', cursive;
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-
+.main {
+    width: 100%;
+}
 #board {
     width: 300px;
     height: 280px;
@@ -38,7 +47,7 @@ hr {
     margin: 2px;
 
     /* Text */
-    color: black;
+    color: white;
     font-size: 36px;
     font-weight: bold;
     display: flex;
@@ -100,3 +109,5 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+
