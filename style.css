@@ -29,6 +29,7 @@ hr {
 
 .main {
     width: 100%;
+    padding: 30px;
 }
 #board {
     width: 300px;
