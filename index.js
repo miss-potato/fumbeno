@@ -833,7 +833,7 @@ var guessList = [
     'guguma', 
     'gutuka',
     'jasusi',
-    'sabini'
+    'sabini',
     'halali', 
     'hatari',
     'haramu',
