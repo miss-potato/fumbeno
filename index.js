@@ -544,6 +544,8 @@ var wordList = [
 ];
 
 var guessList = [
+    'salamu',
+    'chepeo',
     'adhabu', 
     'afyuni', 
     'agulia', 
@@ -710,7 +712,14 @@ var guessList = [
     'dachia', 
     'dakika', 
     'dandia', 
-    'daraja', 
+    'daraja',
+    'daraka',
+    'dangro',
+    'kamili',
+    'daraka',
+    'wakala',
+    'damisi',
+    'hakuwa',
     'darasa', 
     'darizi', 
     'dalali',
@@ -823,6 +832,8 @@ var guessList = [
     'gubiko', 
     'guguma', 
     'gutuka',
+    'jasusi',
+    'sabini'
     'halali', 
     'hatari',
     'haramu',
