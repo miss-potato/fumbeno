@@ -39,6 +39,7 @@ hr {
     background-color: transparent;
     outline: none;
     cursor: pointer;
+    border: none;
 }
 
 .main {
