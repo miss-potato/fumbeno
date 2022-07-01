@@ -38,9 +38,10 @@ hr {
     
 }
 #board {
-    width: 100%;
+    width: 300px;
     height: 280px;
     margin-top: 3px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
