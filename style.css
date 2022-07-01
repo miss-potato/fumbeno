@@ -32,6 +32,7 @@ hr {
 
 .main {
     width: 100%;
+    text-align: center;
 }
 #board {
     width: 300px;
