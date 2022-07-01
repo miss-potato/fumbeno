@@ -38,6 +38,7 @@ hr {
     padding-left: 20px;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
 }
 
 .main {
