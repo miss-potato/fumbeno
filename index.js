@@ -1338,6 +1338,31 @@ window.onload = function(){
     intialize();
 }
 
+function totalPlayed(){
+    //total number of times played
+    const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
+    window.localStorage.setItem('totalPlayed', Number(totalPlayed)+1);
+    document.getElementById("total-played").innerText = totalPlayed;
+}
+
+function totalWins(){
+    //total wins
+            const totalWins = window.localStorage.getItem('totalWins') || 0;
+            window.localStorage.setItem('totalWins', Number(totalWins)+1);
+            document.getElementById("total-wins").innerText = totalWins;
+}
+
+function currentStreak(){
+    //current Streak
+            const currentStreak = window.localStorage.getItem('currentStreak') || 0;
+            window.localStorage.setItem('currentStreak', Number(currentStreak)+1);
+            document.getElementById("current-streak").innerText = currentStreak;
+}
+
+function lost() {
+     window.localStorage.setItem('currentStreak', 0);
+     document.getElementById("current-streak").innerText = currentStreak;
+}
 
 function intialize() {
 
@@ -1436,10 +1461,8 @@ function processInput(e) {
     if (!gameOver && row == height) {
         gameOver = true;
         document.getElementById("answer").innerText = "Samahani neno la leo ni "+word;
-         window.localStorage.setItem('totalPlayed', Number(totalPlayed)+1);
-        document.getElementById("total-played").innerText = totalPlayed;
-         window.localStorage.setItem('currentStreak', 0);
-         document.getElementById("current-streak").innerText = currentStreak;
+        totalPlayed();
+        lost();
     }
 }
 
@@ -1498,20 +1521,9 @@ function update() {
         if (correct == width) {
             document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
             gameOver = true;
-            //total number of times played
-            const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
-            window.localStorage.setItem('totalPlayed', Number(totalPlayed)+1);
-            document.getElementById("total-played").innerText = totalPlayed;
-            
-            //total wins
-            const totalWins = window.localStorage.getItem('totalWins') || 0;
-            window.localStorage.setItem('totalWins', Number(totalWins)+1);
-            document.getElementById("total-wins").innerText = totalWins;
-            
-            //current Streak
-            const currentStreak = window.localStorage.getItem('currentStreak') || 0;
-            window.localStorage.setItem('currentStreak', Number(currentStreak)+1);
-            document.getElementById("current-streak").innerText = currentStreak;
+            totalPlayed();
+            totalWins();
+            currentStreak();
         }
         
     }
