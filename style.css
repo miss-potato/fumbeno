@@ -134,7 +134,7 @@ hr {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 30px;
+    margin-top: 10px;
 }
 
 .play, .winning, .streaks {
