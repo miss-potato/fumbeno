@@ -1337,23 +1337,7 @@ word = wordList[Math.floor(word)].toUpperCase();
 window.onload = function(){
     intialize();
 }
-
-function updateStatsModal() {
-    const totalPlayed = window.localStorage.getItem('totalPlayed');
-    const totalWins = window.localStorage.getItem('totalWins');
-    const currentStreak = window.localStorage.getItem('currentStreak');
-    
-    document.getElementById("total-played").textContent = totalPlayed;
-    document.getElementById("total-wins").textContent = totalWins;
-    document.getElementById("current-streak").textContent = currentStreak;
-}
-
-
-      document.querySelector("#statistics").addEventListener("click", function() {
-            document.querySelector(".scores").style.display = "block";
-          updateStatsModal();
-        });
-
+      
 function totalPlayed(){
     //total number of times played
     const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
@@ -1381,11 +1365,17 @@ function lost() {
      document.getElementById("current-streak").innerText = currentStreak;
 }
 
-function current() {
-    document.getElementById("total-played").innerText = totalPlayed;
-    document.getElementById("total-wins").innerText = totalWins;
-    document.getElementById("current-streak").innerText = currentStreak;
+function updateStatsModal() {
+    const totalPlayed = window.localStorage.getItem('totalPlayed');
+    const totalWins = window.localStorage.getItem('totalWins');
+    const currentStreak = window.localStorage.getItem('currentStreak');
+    
+    document.getElementById("total-played").textContent = totalPlayed;
+    document.getElementById("total-wins").textContent = totalWins;
+    document.getElementById("current-streak").textContent = currentStreak;
 }
+
+
 
 function intialize() {
 
