@@ -130,4 +130,10 @@ hr {
     align-items: center;
 }
 
+.stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
