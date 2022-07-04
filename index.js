@@ -1436,7 +1436,10 @@ function processInput(e) {
     if (!gameOver && row == height) {
         gameOver = true;
         document.getElementById("answer").innerText = "Samahani neno la leo ni "+word;
-        document.querySelector(".scores").style.display = "block";
+         window.localStorage.setItem('totalPlayed', Number(totalPlayed)+1);
+        document.getElementById("total-played").innerText = totalPlayed;
+         window.localStorage.setItem('currentStreak', 0);
+         document.getElementById("current-streak").innerText = currentStreak;
     }
 }
 
@@ -1495,7 +1498,20 @@ function update() {
         if (correct == width) {
             document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
             gameOver = true;
-            document.querySelector(".scores").style.display = "block";
+            //total number of times played
+            const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
+            window.localStorage.setItem('totalPlayed', Number(totalPlayed)+1);
+            document.getElementById("total-played").innerText = totalPlayed;
+            
+            //total wins
+            const totalWins = window.localStorage.getItem('totalWins') || 0;
+            window.localStorage.setItem('totalWins', Number(totalWins)+1);
+            document.getElementById("total-wins").innerText = totalWins;
+            
+            //current Streak
+            const currentStreak = window.localStorage.getItem('currentStreak') || 0;
+            window.localStorage.setItem('currentStreak', Number(currentStreak)+1);
+            document.getElementById("current-streak").innerText = currentStreak;
         }
         
     }
