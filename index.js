@@ -1338,6 +1338,41 @@ window.onload = function(){
     intialize();
 }
 
+function updateStatsModal() {
+    const totalPlayed = window.localStorage.getItem('totalPlayed');
+    const totalWins = window.localStorage.getItem('totalWins');
+    const currentStreak = window.localStorage.getItem('currentStreak');
+    
+    document.getElementById("total-played").textContent = totalPlayed;
+    document.getElementById("total-wins").textContent = totalWins;
+    document.getElementById("current-streak").textContent = currentStreak;
+}
+
+window.addEventListener("load", function(){
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".popup").style.display = "block";
+                }
+            ), 1000
+        });
+
+        document.querySelector("#close").addEventListener("click", function() {
+            document.querySelector(".popup").style.display = "none";
+
+        });
+      document.querySelector("#exit").addEventListener("click", function() {
+            document.querySelector(".scores").style.display = "none";
+
+        });
+        document.querySelector("#open").addEventListener("click", function() {
+            document.querySelector(".popup").style.display = "block";
+
+        });
+      document.querySelector("#statistics").addEventListener("click", function() {
+            updateStatsModal();
+            document.querySelector(".scores").style.display = "block";
+        });
+
 function totalPlayed(){
     //total number of times played
     const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
