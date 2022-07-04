@@ -1348,26 +1348,7 @@ function updateStatsModal() {
     document.getElementById("current-streak").textContent = currentStreak;
 }
 
-window.addEventListener("load", function(){
-            setTimeout(
-                function open(event) {
-                    document.querySelector(".popup").style.display = "block";
-                }
-            ), 1000
-        });
 
-        document.querySelector("#close").addEventListener("click", function() {
-            document.querySelector(".popup").style.display = "none";
-
-        });
-      document.querySelector("#exit").addEventListener("click", function() {
-            document.querySelector(".scores").style.display = "none";
-
-        });
-        document.querySelector("#open").addEventListener("click", function() {
-            document.querySelector(".popup").style.display = "block";
-
-        });
       document.querySelector("#statistics").addEventListener("click", function() {
             updateStatsModal();
             document.querySelector(".scores").style.display = "block";
