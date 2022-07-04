@@ -1360,6 +1360,7 @@ function currentStreak(){
 }
 
 function lost() {
+    const currentStreak = window.localStorage.getItem('currentStreak') || 0;
      window.localStorage.setItem('currentStreak', 0);
      document.getElementById("current-streak").innerText = currentStreak;
 }
