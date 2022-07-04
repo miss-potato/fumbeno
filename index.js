@@ -6,6 +6,8 @@ var width = 6; //length of the word
 var row = 0; //current guess (attempt #)
 var col = 0; //current letter for that attempt
 
+let score = 0;
+
 var gameOver = false;
 // var word = "SQUID";
 var wordList = [
@@ -1493,6 +1495,7 @@ function update() {
             document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
             gameOver = true;
         }
+        document.querySelector(".popup").style.display = "block";
     }
 
     console.log(letterCount);
