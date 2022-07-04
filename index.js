@@ -1366,9 +1366,9 @@ function lost() {
 }
 
 function updateStatsModal() {
-    const totalPlayed = window.localStorage.getItem('totalPlayed');
-    const totalWins = window.localStorage.getItem('totalWins');
-    const currentStreak = window.localStorage.getItem('currentStreak');
+    const totalPlayed = window.localStorage.getItem('totalPlayed') || 0;
+    const totalWins = window.localStorage.getItem('totalWins') || 0;
+    const currentStreak = window.localStorage.getItem('currentStreak') || 0;
     
     document.getElementById("total-played").textContent = totalPlayed;
     document.getElementById("total-wins").textContent = totalWins;
