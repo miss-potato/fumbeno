@@ -1364,7 +1364,15 @@ function lost() {
      document.getElementById("current-streak").innerText = currentStreak;
 }
 
+function current() {
+    document.getElementById("total-played").innerText = totalPlayed;
+    document.getElementById("total-wins").innerText = totalWins;
+    document.getElementById("current-streak").innerText = currentStreak;
+}
+
 function intialize() {
+    
+    current();
 
     // Create the game board
     for (let r = 0; r < height; r++) {
