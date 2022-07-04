@@ -155,7 +155,7 @@
     <div class="header">
         <div class="links"><button id="open"><i class="bi bi-info-circle-fill" style="color:white;"></i></button></div>
         <h1 id="title">FUMBENO</h1>
-        <div class="links"><button id="open"><i class="bi bi-bar-chart-fill" style="color:white;"></i></button></div>
+        <div class="links"><button id="stastics"><i class="bi bi-bar-chart-fill" style="color:white;"></i></button></div>
         
         
     </div>
@@ -185,6 +185,10 @@
         });
         document.querySelector("#open").addEventListener("click", function() {
             document.querySelector(".popup").style.display = "block";
+
+        });
+      document.querySelector("#statistics").addEventListener("click", function() {
+            document.querySelector(".scores").style.display = "block";
 
         });
     </script>
