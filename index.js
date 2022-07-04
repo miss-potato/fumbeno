@@ -1334,6 +1334,8 @@ guessList = guessList.concat(wordList);
 var word = parseInt(Date.now() - new Date(2022, 0, 1)) / 1000 / 60 / 60 / 24 ;
 word = wordList[Math.floor(word)].toUpperCase();
 
+const guessDistribution = [];
+
 window.onload = function(){
     intialize();
 }
@@ -1528,6 +1530,7 @@ function update() {
             keyTile.classList.add("correct");
 
             correct += 1;
+            guessDistribution.push("correct");
             letterCount[letter] -= 1; //deduct the letter count
         }
 
@@ -1556,20 +1559,22 @@ function update() {
                 let keyTile = document.getElementById("Key" + letter);
                 if (!keyTile.classList.contains("correct")) {
                     keyTile.classList.add("present");
+                    guessDistribution.push("present");
                 }
                 letterCount[letter] -= 1;
             } // Not in the word or (was in word but letters all used up to avoid overcount)
             else {
                 currTile.classList.add("absent");
                 let keyTile = document.getElementById("Key" + letter);
-                keyTile.classList.add("absent")
+                keyTile.classList.add("absent");
+                guessDistribution.push("absent");
             }
         }
     }
 
     row += 1; //start new row
     col = 0; //start at 0 for new row
-
+    console.log(guessDistribution);
     
 }
 
