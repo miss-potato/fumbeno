@@ -1436,7 +1436,7 @@ function processInput(e) {
     if (!gameOver && row == height) {
         gameOver = true;
         document.getElementById("answer").innerText = "Samahani neno la leo ni "+word;
-        document.querySelector(".popup").style.display = "block";
+        document.querySelector(".scores").style.display = "block";
     }
 }
 
@@ -1495,7 +1495,7 @@ function update() {
         if (correct == width) {
             document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
             gameOver = true;
-            document.querySelector(".popup").style.display = "block";
+            document.querySelector(".scores").style.display = "block";
         }
         
     }
