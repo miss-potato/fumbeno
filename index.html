@@ -26,6 +26,22 @@
             top: 50%;
             border-radius: 10px;
         }
+        
+        .scores {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            height: 50vh;
+            display: none;
+            background-color: white;
+            width: 350px;
+            padding: 30px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+
+            top: 50%;
+            border-radius: 10px;
+        }
         .popup h2 {
             font-weight: bolder;
             text-align: center;
@@ -130,10 +146,17 @@
         
         
     </div>
+    
+    <div class="scores">
+        <button id="exit">&times;</button>
+        
+    </div>
 
     <div class="header">
-        <h1 id="title">FUMBENO</h1>
         <div class="links"><button id="open"><i class="bi bi-info-circle-fill" style="color:white;"></i></button></div>
+        <h1 id="title">FUMBENO</h1>
+        <div class="links"><button id="open"><i class="bi bi-bar-chart-fill" style="color:white;"></i></button></div>
+        
         
     </div>
     <div class="main">
@@ -154,6 +177,10 @@
 
         document.querySelector("#close").addEventListener("click", function() {
             document.querySelector(".popup").style.display = "none";
+
+        });
+      document.querySelector("#exit").addEventListener("click", function() {
+            document.querySelector(".scores").style.display = "none";
 
         });
         document.querySelector("#open").addEventListener("click", function() {
