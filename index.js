@@ -1371,8 +1371,6 @@ function current() {
 }
 
 function intialize() {
-    
-    current();
 
     // Create the game board
     for (let r = 0; r < height; r++) {
