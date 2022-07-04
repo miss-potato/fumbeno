@@ -1350,8 +1350,8 @@ function updateStatsModal() {
 
 
       document.querySelector("#statistics").addEventListener("click", function() {
-            updateStatsModal();
             document.querySelector(".scores").style.display = "block";
+          updateStatsModal();
         });
 
 function totalPlayed(){
