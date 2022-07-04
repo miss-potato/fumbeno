@@ -136,4 +136,6 @@ hr {
     width: 100%;
 }
 
-
+.play, .winning, .streaks {
+    flex-direction: column;   
+}
