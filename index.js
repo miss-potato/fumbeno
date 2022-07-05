@@ -643,7 +643,7 @@ var guessList = [
     'maombi', 
     'mapana', 
     'mapato', 
-    'mapema,'  
+    'mapema',  
     'mapepe',  
     'mapiku',  
     'mapito',  
@@ -1097,7 +1097,6 @@ var guessList = [
     'aibika', 
     'akhera', 
     'albamu',
-    'amilesi', 
     'anguka', 
     'anjari', 
     'askari', 
