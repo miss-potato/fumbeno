@@ -79,19 +79,20 @@ hr {
 .correct {
     background-color: #6AAA64;
     color: white;
-    border-color: white;
+    border: none;
 }
+
 
 .present {
     background-color: #C9B458;
     color: white;
-    border-color: white;
+    border: none;
 }
 
 .absent {
     background-color: #787C7E;
     color: white;
-    border-color:white;
+    border: none;
 }
 
 
