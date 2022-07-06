@@ -1,6 +1,6 @@
 
 
-var height = 6; //number of guesses
+var height = 5; //number of guesses
 var width = 6; //length of the word
 
 var row = 0; //current guess (attempt #)
