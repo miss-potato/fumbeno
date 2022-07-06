@@ -2474,7 +2474,7 @@ function update() {
         }
 
         if (correct == width) {
-            document.getElementById("answer").innerText = "Hongera!Umepatia neno la leo";
+            document.getElementById("answer").innerText = "Hongera! Umepatia neno la leo";
             gameOver = true;
             totalPlayed();
             totalWins();
