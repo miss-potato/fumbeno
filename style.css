@@ -97,7 +97,7 @@ hr {
 .keyboard-row {
     width: 400px;
 
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
