@@ -546,6 +546,8 @@ var wordList = [
 ];
 
 var guessList = [
+    'dharau',
+    'sahani',
     'lahaja',
     'laghai',
     'lahani',
